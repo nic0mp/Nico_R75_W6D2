@@ -18,7 +18,11 @@ let person3 = {
         cupids_candies:"Chocolate Malt"
     }]
 }
-
+for(let i=0; i<Object.keys(person3).length;i++){
+    if(Array.isArray(Object.values(person3)[i])){
+        console.log(Object.values(person3)[i])
+    }
+}
 
 //=======Exercise #2=========//
 /*
@@ -34,10 +38,22 @@ age by 3 years. Use an arrow function for both methods
 
 
 // Use an arrow to create the printInfo method
-
 // Create another arrow function for the addAge method that takes a single parameter
 // Adding to the age 
+class Person{
+    constructor(name,age){
+        this.age = age;
+        this.name = name;
+    }
 
+    printInfo() {
+        return `Name: ${this.name} \nAge: ${this.age} `
+    }
+}
+
+let chunks = new Person('Chunks',1,)
+
+console.log(chunks.printInfo())
 
 // =============Exercise #3 ============//
 /*
@@ -47,5 +63,29 @@ age by 3 years. Use an arrow function for both methods
     If the length of the string is less than 10 console log "Small Number"
 */
 
-homework2.js
-Displaying homework2.js.
+// CODEWARS CONVERSION
+// def sum_array(a):
+//     return sum(a)
+
+function sum_array(a){
+    var num = 5;
+    var num2 = 5
+    return num + num2
+}
+console.log(sum_array())
+
+// def boolean_to_string(b):
+//     if b == True:
+//         return 'True'
+//     else:
+//         return 'False'
+
+function boolean_to_string(b){
+    if (b==true){
+        return true
+    } else {
+        return false
+    }
+}
+
+console.log(boolean_to_string())
