@@ -62,6 +62,15 @@ console.log(chunks.printInfo())
     If the length is greater than ten console log "Big word". 
     If the length of the string is less than 10 console log "Small Number"
 */
+let strLen = new Promise((pass,fail) => {
+    let n = 11
+    if (n > 10){
+        pass("Big Word")
+    }else {
+        fail("Small Number")
+    }
+
+})
 
 // CODEWARS CONVERSION
 // def sum_array(a):
